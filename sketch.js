@@ -1,5 +1,6 @@
 let img;
 const backgroundColor = 0;
+const textContent = ' Congratulations!\n You have either made it to the end or decided to click here for some reason.\n You do not win a puppy.';
 
 function preload() {
   img = loadImage('backgroundImage.png');
@@ -13,7 +14,7 @@ function setup() {
   background(backgroundColor);
   img.loadPixels();
 
-  const message = createP('Congratulations!\n You have either made it to the end or decided to click here for some reason.\n You do not win a puppy.');
+  const message = createP(textContent);
   message.position(0, height / 3);
   message.class('invisible');
 }
@@ -38,5 +39,5 @@ function draw() {
 
   fill(255);
   textSize(36);
-  text(' Congratulations!\n You have either made it to the end ordecided to click here for some reason.\n You do not win a puppy.', 0, height / 2);
+  text(textContent, 0, height / 2);
 }
